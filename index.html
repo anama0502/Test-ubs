@@ -15,6 +15,7 @@
     header {
       background-color: rgba(0, 51, 102, 0.85);
       padding: 40px 20px;
+      animation: slideDown 1s ease-out;
     }
     header h1 {
       font-size: 3em;
@@ -22,12 +23,103 @@
     }
     section {
       padding: 40px 20px;
+      animation: fadeIn 2s ease-in;
     }
     .cta {
       background-color: rgba(0, 102, 204, 0.9);
       padding: 30px;
       border-radius: 15px;
       max-width: 600px;
+      margin: 30px auto;
+      animation: popIn 1s ease;
+    }
+    .cta h2 {
+      margin-bottom: 20px;
+    }
+    .cta p {
+      font-size: 1.2em;
+    }
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .images img {
+      width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+    .images img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background-color: rgba(0, 0, 51, 0.9);
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00cc99;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    a.button:hover {
+      background-color: #009973;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Protégeons notre Océan</h1>
+  </header>
+
+  <section>
+    <p>Chaque année, des millions de tonnes de plastique finissent dans les océans, mettant en danger la faune marine et les écosystèmes marins. Agissons ensemble !</p>
+  </section>
+
+  <section class="images">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Vagues de l'océan">
+    <img src="https://images.unsplash.com/photo-1587502536263-3e4d5a41a3a1" alt="Tortue marine">
+    <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="Poisson coloré">
+  </section>
+
+  <section class="cta">
+    <h2>Comment aider ?</h2>
+    <p>
+      Réduisez vos déchets, participez à des nettoyages de plage, soutenez des associations, et sensibilisez autour de vous.
+    </p>
+    <a href="#" class="button">Je m'engage</a>
+  </section>
+
+  <footer>
+    &copy; 2025 - Ensemble pour l'Océan | Design inspiré par la mer 🌊<br>
+    Contact : 06 57 96 83 6
+  </footer>
+</body>
+</html>
       margin: 30px auto;
     }
     .cta h2 {
